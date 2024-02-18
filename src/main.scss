@@ -1,0 +1,20 @@
+@font-face {
+  @import url('../public/fonts/Rubik-VariableFont_wght.ttf');
+  font-family: 'Rubik';
+  font-weight: normal;
+}
+
+@font-face {
+  @import url('../public/fonts/Hagrid-Regular-trial.ttf');
+  font-family: 'Hagrid Trial';
+}
+
+@import "utils/colors";
+
+@import "config/reset";
+@import "config/typo";
+@import "config/base";
+
+@import "layout/navbar";
+
+@import "view/home";
