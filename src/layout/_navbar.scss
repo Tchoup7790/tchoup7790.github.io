@@ -1,24 +1,49 @@
-.navbar{
+.navbar {
     display: flex;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    height: fit-content;
     align-items: center;
     width: 100vw;
     padding: 1rem;
     background-color: $color-white;
-    border-top: 1px solid $color-green;
-    &__list{
+    /*border-top: 1px solid $color-green;*/
+    &__list {
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex: 1;
-        &__item{    
+
+        &__item-basic {
             text-align: center;
+            position: relative;
+            padding: .5rem .8rem;
         }
+
+        &--item-active {
+            position: relative;
+            padding: .5rem 2rem;
+            a {
+                cursor: default;
+                color: $color-green;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    bottom: -.25rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: .5rem;
+                    height: .5rem;
+                    border-radius: 100%;
+                    background-color: $color-green;
+                }
+            }
+        }
+
     }
-    &__title{
+    &__title {
         text-align: center;
         flex: 1;
+        cursor: pointer;
     }
 }
 
@@ -29,3 +54,61 @@
         top: 0;
     }
 }
+
+
+
+/*
+        a {
+            &::before {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                transform: scaleX(0);
+                transform-origin: left bottom;
+                height: 2px;
+                background-color: $color-black;
+                transition: transform 1s cubic-bezier(.77,.15,.54,1.23);
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                width: 100%;
+                transform: scaleX(0);
+                transform-origin: right top;
+                height: 2px;
+                background-color: $color-black;
+                transition: transform 1s cubic-bezier(.77,.15,.54,1.23);
+            }
+        }
+        &:hover{
+            a {
+                &::before {
+                    transform: ScaleX(1);
+                }
+                &::after {
+                    transform: ScaleX(1);
+                }
+            }
+        }
+    }
+    &--item-active {
+        position: relative;
+        padding: .5rem 2rem;
+        a {
+            cursor: default;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 2px solid $color-black;
+            }
+        }
+    }
+}*/

@@ -3,5 +3,8 @@ body{
   flex-direction: column;
   width: 100vw;
   height: fit-content;
+  align-content: center;
+  padding: 1rem 0;
+  overflow-x: hidden;
   background-color: $color-white;
 }

@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    <Navbar></Navbar>
+    <Navbar active="home"></Navbar>
         {/* <h1 className="home__title">
         {title.map((letter, index) => (
             <motion.span

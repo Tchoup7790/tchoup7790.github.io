@@ -1,5 +1,5 @@
 html{
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-size: 8px;
     font-weight: 600;
     color: $color-green;
@@ -7,7 +7,7 @@ html{
 }
 
 h3{
-    font-family: 'Hagrid Trial';
+    font-family: 'Hagrid Trial', sans-serif;
     font-size: 2.25rem;
 }
 
@@ -16,9 +16,9 @@ a{
     text-decoration: none;
 }
  
-@media screen and (min-width: 425pxpx) and (max-width: 768px){
+@media screen and (min-width: 425px) and (max-width: 768px){
     html{
-        font-size: 16px; //Little
+        font-size: 12px; //Small
     }
 }
 
@@ -28,7 +28,13 @@ a{
     }
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1440px) and (max-width: 2560px){
+    html{
+        font-size: 16px; //Mid
+    }
+}
+
+@media screen and (min-width: 2560px){
     html{
         font-size: 24px; //Big
     }
