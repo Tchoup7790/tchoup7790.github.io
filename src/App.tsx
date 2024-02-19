@@ -9,31 +9,7 @@ function App() {
 
   return (
     <>
-    <Navbar active="home"></Navbar>
-        {/* <h1 className="home__title">
-        {title.map((letter, index) => (
-            <motion.span
-                key={index}
-                initial={{ opacity: 0, y: "100%" }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-                {letter}
-            </motion.span>
-        ))}
-        </h1>
-        <p>
-            {lorem.map((letter, index) => (
-                <motion.span
-                    key={index}
-                    initial={{ opacity: 0 }}
-                    animate={{opacity:1}}
-                    transition={{ duration: .1, delay: index * .025}}
-                >
-                    {letter}
-                </motion.span>
-            ))}
-        </p> */}
+    <Navbar></Navbar>
     </>
   )
 }
