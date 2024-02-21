@@ -1,10 +1,10 @@
 body{
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  box-sizing: border-box;
   height: fit-content;
   align-content: center;
-  padding: 1rem 0;
   overflow-x: hidden;
-  background-color: $color-white;
+  background-color: var(--bg-color);
+  transition: .3s;
 }

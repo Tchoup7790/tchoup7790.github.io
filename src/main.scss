@@ -1,12 +1,13 @@
 @font-face {
-  @import url('../public/fonts/Rubik-VariableFont_wght.ttf');
-  font-family: 'Rubik';
+  @import url('../public/fonts/Hagrid-Regular-trial.ttf');
+  font-family: 'Hagrid Trial';
   font-weight: normal;
 }
 
 @font-face {
-  @import url('../public/fonts/Hagrid-Regular-trial.ttf');
-  font-family: 'Hagrid Trial';
+  @import url('../public/fonts/OTTOATTACTYPE.ttf');
+  font-family: 'Otto Attac Type';
+  font-weight: 600;
 }
 
 @import "utils/colors";
@@ -16,5 +17,6 @@
 @import "config/base";
 
 @import "layout/navbar";
+@import "layout/head";
 
 @import "view/home";
