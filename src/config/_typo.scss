@@ -1,13 +1,17 @@
 body{
-    font-family: 'Hagrid Trial', sans-serif;
+    font-family: "Travels Trial", sans-serif;
     font-size: 8px;
     color: var(--font-color);
     text-decoration: none;
+    font-stretch: extra-condensed;
+    font-weight: 500;
 }
 
 h1{
-    font-size: 5rem;
-    font-weight: 600;
+    font-family: 'Otto Attac Type', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: var(--primary-color);
 }
 
 h3{
@@ -16,9 +20,20 @@ h3{
     color: var(--primary-color);
 }
 
+h4{
+    font-size: 5rem;
+    font-weight: 800;
+}
+
 a{
     text-decoration: none;
     color: var(--font-color);
+}
+
+textarea, input{
+    font-family: "Travels Trial", sans-serif;
+    font-size: .9rem;
+    text-decoration: none;
 }
  
 @media screen and (min-width: 425px) and (max-width: 768px){

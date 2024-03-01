@@ -7,6 +7,9 @@
     justify-content: center;
     padding: 1rem 2rem;
     &__title{
+        position: relative;
+        display: flex;
+        flex-direction: column;
         &__span{
             font-family: 'Otto Attac Type', sans-serif;
             text-transform: Uppercase;

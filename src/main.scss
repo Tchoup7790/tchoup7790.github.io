@@ -1,13 +1,11 @@
 @font-face {
-  @import url('../public/fonts/Hagrid-Regular-trial.ttf');
-  font-family: 'Hagrid Trial';
-  font-weight: normal;
+  src: url('../public/fonts/OTTOATTACTYPE.ttf');
+  font-family: 'Otto Attac Type';
 }
 
 @font-face {
-  @import url('../public/fonts/OTTOATTACTYPE.ttf');
-  font-family: 'Otto Attac Type';
-  font-weight: 600;
+  src: url("../public/fonts/TT Travels Trial Medium.otf");
+  font-family: 'Travels Trial';
 }
 
 @import "utils/colors";
@@ -16,7 +14,13 @@
 @import "config/typo";
 @import "config/base";
 
+@import "components/button";
+
 @import "layout/navbar";
 @import "layout/head";
+@import "layout/form";
 
 @import "view/home";
+@import "view/about";
+@import "view/projects";
+@import "view/contact";

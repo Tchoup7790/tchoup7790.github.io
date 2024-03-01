@@ -12,48 +12,41 @@
         width: 100%;
         &__item{
             position: relative;
-            padding: 0 1rem;
-            cursor: pointer;
-        }
-        &__item--active{
-            position: relative;
             padding: .5rem 1rem;
-            z-index: 2;
+            cursor: pointer;
+            transition: opacity .6s ease-in-out;
             a{
                 position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 100%;
+                    transform: scale(0);
+                    height: 1px;
+                    background-color: var(--font-color);
+                    transition: .6s ease-in-out;
+                }
+            }
+            &:hover{
+                a{
+                    &::before{
+                        transform: scale(1);
+                    }
+                }
+            }
+            &--active{
+                z-index: 2;
                 cursor: default;
+                opacity: .6;
+                a{
+                    cursor: default;
+                    &::before{
+                        transform: scale(1);
+                    }
+                }
             }
         }
     }
-
-    //select tab circle
-    /*&__rectangle {
-        position: absolute;
-        background-color: var(--secondary-color-05);
-        border-radius: 100%;
-        &--1{
-            bottom: .7rem;
-            right: 1.7rem;
-            width: 1.7rem;
-            height: 1.7rem;
-            background-color: var(--primary-color-05);
-            z-index: 0;
-        }
-        &--2{
-            top: .2rem;
-            left: .2rem;
-            width: 1.8rem;
-            height: 1.8rem;
-            background-color: var(--secondary-color-05);
-            z-index: 0;
-        }
-        &--3{
-            bottom: .1rem;
-            right: .25rem;
-            width: 1.25rem;
-            height: 1.25rem;
-            background-color: var(--primary-color-05);
-            z-index: 3;
-        }
-    }*/
 }
