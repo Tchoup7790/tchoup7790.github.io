@@ -1,0 +1,8 @@
+@keyframes svgSend {
+  from{
+    transform: translateY(-50%) rotate(0) translateX(0);
+  }
+  to{
+    transform: translateY(-50%) rotate(0) translateX(300%);
+  }
+}

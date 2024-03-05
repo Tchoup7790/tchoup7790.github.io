@@ -1,5 +1,6 @@
 [data-theme="light"] {
     --font-color : rgba(13, 13, 13, 1);
+    --font-color-05 : rgba(13, 13, 13, .5);
     --bg-color : rgba(242, 242, 242, 1);
     --primary-color : rgba(9, 82, 40, 1);
     --primary-color-05 : rgba(9, 82, 40, .5);
@@ -9,6 +10,7 @@
 
 [data-theme="dark"] {
     --font-color : rgba(242, 242, 242, 1);
+    --font-color-005 : rgba(242, 242, 242, .05);
     --bg-color : rgba(13, 13, 13, 1);
     --primary-color : rgba(247, 216, 181, 1);
     --primary-color-05 : rgba(247, 216, 181, .5);

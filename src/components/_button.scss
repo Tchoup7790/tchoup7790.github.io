@@ -1,58 +1,107 @@
-.button{
+.button {
     box-sizing: border-box;
     position: relative;
     display: flex;
-    height: fit-content;
+    height: 3rem;
     width: fit-content;
+    align-items: center;
+    overflow-y: hidden;
+    background-color: transparent;
+    justify-content: center;
     font-family: 'Hagrid Trial', sans-serif;
     font-size: 1.2rem;
-    color: var(--bg-color);
-    background-color: var(--primary-color);
-    padding: .7rem 1.5rem;
+    color: var(--font-color);
+    padding: .7rem 2.15rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 4rem;
     cursor: pointer;
-    transition: background-color .6s .4s ease-in-out;
+
     &::before {
-        position: absolute;
+        box-sizing: border-box;
         content: '';
-        top: -20px;
-        left: -20px;
-        right: -20px;
-        bottom: -20px;
-        border-radius: 20px;
-        background-color: inherit;
+        position: absolute;
+        left: -4rem;
+        overflow: hidden;
         z-index: -1;
-        transform: scale3d(0.7, 0.5, 1);
-        opacity: .4;
+        transform: scaleX(1);
+        border-radius: 4rem;
+        transform-origin: left bottom;
+        height: 3rem;
+        width: 7rem;
+        background-color: var(--primary-color-05);
+        transition: transform .8s ease-in-out, opacity .8s ease-in-out;
     }
-    &:hover{
-        background-color: var(--font-color);
-        animation: anim-moema-1 .6s forwards;
-        &::before{
-            animation: anim-moema-2 .6s .4s forwards;
+
+    &--active {
+        &::before {
+            transform: scaleX(0);
         }
     }
-    &:active{
-        transition: .2s ease-in-out;
+
+    &--send {
+        position: relative;
+
+        &__svg {
+            position: absolute;
+            top: 50%;
+            left: 1.5rem;
+            width: 45px;
+            height: 45px;
+            stroke: var(--font-color);
+            transform: translateY(-50%) rotate(-45deg);
+            transition: transform .6s ease-in-out, stroke .8s ease-in-out;
+        }
+
+        &__span {
+            padding-left: 2.25rem;
+            transform: translateX(0);
+            opacity: 1;
+            transition: transform .8s ease-in-out, opacity 0s .8s ease-in-out, color .8s ease-in-out;
+        }
+
+        &__path{
+            opacity: 0;
+            transition: opacity .8s .8s ease-in-out;
+        }
+
+        &--hover {
+            &:hover {
+                &::before {
+                    background-color: var(--primary-color);
+                    transform: scaleX(2.1);
+                }
+
+                span {
+                    color: var(--bg-color);
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+
+                svg {
+                    stroke: var(--bg-color);
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+            }
+        }
+
+        &--active {
+            position: relative;
+            path{
+                opacity: 1;
+            }
+
+            svg {
+                stroke: var(--font-color);
+                transform: translateY(-50%) rotate(0);
+                animation: svgSend 1s .6s ease-in-out forwards;
+            }
+
+            span {
+                transform: translateX(-200%);
+                opacity: 0;
+            }
+        }
     }
 }
 
-@keyframes anim-moema-1 {
-    60% {
-        transform: scale3d(0.8, 0.8, 1);
-    }
-    85% {
-        transform: scale3d(1.1, 1.1, 1);
-    }
-    100% {
-        transform: scale3d(1, 1, 1);
-    }
-}
 
-@keyframes anim-moema-2 {
-    to {
-        opacity: 0;
-        transform: scale3d(1, 1, 1);
-    }
-}

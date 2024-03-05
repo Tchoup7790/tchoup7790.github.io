@@ -9,6 +9,7 @@
     &__title{
         position: relative;
         display: flex;
+        gap: 2rem;
         flex-direction: column;
         &__span{
             font-family: 'Otto Attac Type', sans-serif;
