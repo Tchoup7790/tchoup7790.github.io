@@ -1,0 +1,67 @@
+.loader{
+    box-sizing: border-box;
+    position: relative;
+    height: 3rem;
+    width: auto;
+    align-items: center;
+    background-color: transparent;
+    padding: 0 2.15rem;
+    border: none;
+    &--G1 {
+        animation: spinningLoaderG1 1.5s ease-in-out infinite;
+        circle {
+          background-color: var(--secondary-color-05);
+        }
+    }
+    &--G2 {
+        animation: spinningLoaderG2 1.5s ease-out infinite;
+        circle {
+          background-color: var(--primary-color-05);
+        }
+    }
+    &--G3 {
+        animation: spinningLoaderG3 1.5s ease-in infinite;
+        circle{
+          width: .45rem;
+          height: .45rem;
+        }
+    }
+    &--G4 {
+        animation: spinningLoaderG4 1.5s linear alternate-reverse infinite;
+        circle {
+          background-color: var(--secondary-color);
+        }
+    }
+    &__dot {
+        position: absolute;
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        transition: transform .8s ease-in-out, background-color .8s ease-in-out;
+        &--first {
+          transform: translate(-1.5rem, 0);
+        }
+        &--second {
+            transform: translate(-1rem, -1rem);
+        }
+        &--third {
+            transform: translate(0, -1.5rem);
+        }
+        &--fourth {
+            transform: translate(1rem, -1rem);
+        }
+        &--fifth {
+            transform: translate(1.5rem, 0);
+        }
+        &--sixth {
+          transform: translate(1rem, 1rem);
+        }
+        &--seventh {
+            transform: translate(0, 1.5rem);
+        }
+        &--eighth {
+            transform: translate(-1rem, 1rem);
+        }
+    }
+}

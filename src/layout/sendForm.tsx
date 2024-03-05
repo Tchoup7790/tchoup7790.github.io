@@ -2,6 +2,7 @@ import {motion} from "framer-motion";
 /*import emailjs from '@emailjs/browser';*/
 import React from "react";
 import SendButton from "../components/sendButton.tsx";
+import SpinningLoader from "../components/spinningLoader.tsx";
 
 function SendForm() {
 
@@ -86,12 +87,7 @@ function SendForm() {
                 <textarea name="message" className="form__section__textarea"/>
             </section>
             {isSending == "void" && <SendButton/>}
-            {isSending == "waiting" && <motion.p
-                className="form__p"
-                initial={{opacity: 0, y: "100%"}}
-                animate={{opacity: 1, y: 0}}
-                transition={{duration: .7}}
-            >Waiting</motion.p>}
+            {isSending == "waiting" && <SpinningLoader/>}
             {isSending == "sent" && <motion.p
                 className="form__p--success form__p"
                 initial={{opacity: 0, y: "100%"}}
