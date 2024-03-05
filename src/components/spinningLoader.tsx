@@ -3,15 +3,20 @@ import {motion} from "framer-motion";
 function SpinningLoader() {
 
     return (
-        <div className="loader">
+        <motion.div
+            className="loader"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: .7}}
+        >
             <div className="loader--G1">
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--first"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1.7, delay: .1}}
                 />
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--fifth"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
@@ -19,13 +24,13 @@ function SpinningLoader() {
                 />
             </div>
             <div className="loader--G2">
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--second"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1.7, delay: .4}}
                 />
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--sixth"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
@@ -33,13 +38,13 @@ function SpinningLoader() {
                 />
             </div>
             <div className="loader--G3">
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--third"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1.7, delay: .7}}
                 />
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--seventh"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
@@ -47,20 +52,20 @@ function SpinningLoader() {
                 />
             </div>
             <div className="loader--G4">
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--fourth"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1.7, delay: 1}}
                 />
-                <motion.circle
+                <motion.span
                     className="loader__dot loader__dot--eighth"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1.7, delay: 2.2}}
                 />
             </div>
-        </div>
+        </motion.div>
     )
 }
 
