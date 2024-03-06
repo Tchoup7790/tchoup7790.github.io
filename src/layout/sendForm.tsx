@@ -1,37 +1,40 @@
 import {motion} from "framer-motion";
 import emailjs from '@emailjs/browser';
-import React from "react";
+import React, {useRef} from "react";
 import SendButton from "../components/sendButton.tsx";
 import SpinningLoader from "../components/spinningLoader.tsx";
 
 function SendForm() {
+    const form : React.MutableRefObject<any> = useRef()
 
-    const [isSending, setIsSending] = React.useState("void");
-    const sendEmail = async (e : React.FormEvent<HTMLFormElement>) => {
+    const [isSending, setIsSending] = React.useState<string>("void");
+    const sendForm = async (e : React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         document.querySelector('.button--send')!.setAttribute('class', 'button--send--active button--active button')
 
+        await new Promise(r => setTimeout(r, 2000))
+
         setIsSending("waiting")
 
-        emailjs
-            .sendForm('service_gy1mene', 'template_tbwtiu8', e.currentTarget, {publicKey: 'LonPLjMkedDLllUsD'})
+        await new Promise(r => setTimeout(r, 750))
+
+        await emailjs
+            .sendForm('service_gy1mene', 'template_tbwtiu8', form.current, {publicKey: 'LonPLjMkedDLllUsD'})
             .then(
-                () => {
-                    console.log('SUCCESS!')
-                    setIsSending("sent")
-                    e.currentTarget.reset()
-                    },
+                () => {setIsSending("sent")},
                 (error) => {
-                    console.log('FAILED...', error)
                     setIsSending("notSent")
-                    },
+                    console.log('FAILED...', error)
+                },
             );
+
+        form.current.reset()
     };
 
 
     return (
-        <form className="form" onSubmit={sendEmail}>
+        <form className="form" ref={form} onSubmit={sendForm}>
             <section className="form__section">
                 <motion.label
                     className="form__section__label"
