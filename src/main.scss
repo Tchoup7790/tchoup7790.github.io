@@ -1,11 +1,11 @@
 @font-face {
-  src: url('../public/fonts/OTTOATTACTYPE.ttf');
+  src: url("public/fonts/OTTOATTACTYPE.ttf");
   font-family: 'Otto Attac Type';
 }
 
 @font-face {
-  src: url("../public/fonts/TT Travels Trial Medium.otf");
-  font-family: 'Travels Trial';
+  src: url("public/fonts/Geomanist-Regular.otf");
+  font-family: 'Geomanist';
 }
 
 @import "utils/colors";
@@ -22,6 +22,7 @@
 @import "layout/head";
 @import "layout/form";
 
+@import "view/page";
 @import "view/home";
 @import "view/about";
 @import "view/projects";

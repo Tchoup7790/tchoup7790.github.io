@@ -1,11 +1,5 @@
 .home{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
     &__title{
         position: relative;
         display: flex;
@@ -14,6 +8,8 @@
         &__span{
             font-family: 'Otto Attac Type', sans-serif;
             text-transform: Uppercase;
+            font-weight: bolder;
+            font-size: 6rem;
             &--first{
                 color: var(--secondary-color);
             }

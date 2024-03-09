@@ -3,22 +3,28 @@
   display: flex;
   align-content: center;
   width: 100%;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  z-index: 1;
   padding: 1rem 2rem;
   border-bottom: 1px dashed var(--primary-color-05);
   &__title{
     display: none;
     position: relative;
-    flex: 1;
-    span{
-      font-size: 3rem;
-    }
+    fill: var(--primary-color);
+    stroke: var(--primary-color);
+    cursor: pointer;
+    stroke-width: 4;
+    height: 2.3rem;
+    width: 12rem;
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 2560px){
+@media screen and (min-width: 1440px){
     .head{
         &__title{
-          display: block;
+          display: flex;
         }
     }
 }

@@ -3,7 +3,7 @@ import SendForm from "../layout/sendForm.tsx";
 
 function Contact() {
     return (
-        <main className="contact">
+        <main className="page contact">
             <motion.h1
                 className="contact__title"
                 initial={{opacity: 0, y: "100%"}}

@@ -1,11 +1,5 @@
 .projects{
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
   &__title{
     position: relative;
     display: flex;

@@ -1,13 +1,24 @@
 import {motion} from "framer-motion";
 import emailjs from '@emailjs/browser';
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import SendButton from "../components/sendButton.tsx";
 import SpinningLoader from "../components/spinningLoader.tsx";
 
 function SendForm() {
+    /**
+     * Form reference
+     */
     const form : React.MutableRefObject<any> = useRef()
 
-    const [isSending, setIsSending] = React.useState<string>("void");
+    /**
+     * Sending state
+     */
+    const [isSending, setIsSending] = useState<string>("void");
+
+    /**
+     * Send the message with emailjs
+     * @param e : React.FormEvent<HTMLFormElement>
+     */
     const sendForm = async (e : React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
@@ -15,9 +26,12 @@ function SendForm() {
 
         await new Promise(r => setTimeout(r, 2000))
 
+        /**
+         * Set the sending state for loading animation
+         */
         setIsSending("waiting")
 
-        await new Promise(r => setTimeout(r, 750))
+        await new Promise(r => setTimeout(r, 2000))
 
         await emailjs
             .sendForm('service_gy1mene', 'template_tbwtiu8', form.current, {publicKey: 'LonPLjMkedDLllUsD'})
@@ -35,6 +49,7 @@ function SendForm() {
 
     return (
         <form className="form" ref={form} onSubmit={sendForm}>
+
             <section className="form__section">
                 <motion.label
                     className="form__section__label"
@@ -45,6 +60,7 @@ function SendForm() {
                 </motion.label>
                 <input className="form__section__input" type="text" name="name" required/>
             </section>
+
             <section className="form__section">
                 <motion.label
                     className="form__section__label"
@@ -55,6 +71,7 @@ function SendForm() {
                 </motion.label>
                 <input className="form__section__input" type="email" name="email" required/>
             </section>
+
             <section className="form__section">
                 <motion.label
                     className="form__section__label"
@@ -65,8 +82,13 @@ function SendForm() {
                 </motion.label>
                 <textarea name="message" className="form__section__textarea" required/>
             </section>
+
+            {/**
+             * Send button handling and animation
+             */}
             {isSending == "void" && <SendButton/>}
             {isSending == "waiting" && <SpinningLoader/>}
+
             {isSending == "sent" &&
                 <p className="form__validation">
                     <motion.span
@@ -98,10 +120,10 @@ function SendForm() {
                     </svg>
                 </p>
             }
+
             {isSending == "notSent" &&
-                <p className="form__validation"
-                   style={{flexDirection:"column"}}
-                >
+
+                <p className="form__validation" style={{flexDirection:"column"}}>
                     <motion.span
                         initial={{opacity: 0, y: "100%"}}
                         animate={{opacity: 1, y: 0}}
@@ -109,6 +131,7 @@ function SendForm() {
                     >
                         Sorry, Something goes wrong
                     </motion.span>
+
                     <motion.span
                         style={{fontSize: ".8rem"}}
                         initial={{opacity: 0, y: "100%"}}

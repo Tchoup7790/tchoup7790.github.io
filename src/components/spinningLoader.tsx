@@ -1,7 +1,9 @@
 import {motion} from "framer-motion";
 
 function SpinningLoader() {
-
+    /**
+     * Spinning loader during the sending of the form
+     */
     return (
         <motion.div
             className="loader"

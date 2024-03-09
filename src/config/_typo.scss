@@ -1,10 +1,10 @@
 body{
-    font-family: "Travels Trial", sans-serif;
+    font-family: "Geomanist", sans-serif;
     font-size: 8px;
     color: var(--font-color);
     text-decoration: none;
     font-stretch: extra-condensed;
-    font-weight: 500;
+    font-weight: lighter;
 }
 
 h1{
@@ -14,14 +14,13 @@ h1{
     color: var(--primary-color);
 }
 
-h3{
-    font-family: 'Otto Attac Type', sans-serif;
-    font-weight: 600;
-    color: var(--primary-color);
+h2{
+    font-size: 5rem;
+    font-weight: 900;
 }
 
-h4{
-    font-size: 5rem;
+h3{
+    font-size: 2.7rem;
     font-weight: 800;
 }
 
@@ -30,8 +29,12 @@ a{
     color: var(--font-color);
 }
 
+p{
+    line-height: 2;
+}
+
 textarea, input{
-    font-family: "Travels Trial", sans-serif;
+    font-family: "Geomanist", sans-serif;
     font-size: .9rem;
     text-decoration: none;
 }

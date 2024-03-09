@@ -1,13 +1,15 @@
 import {motion} from "framer-motion";
 
 function SendButton() {
-
+    /**
+     * The SendButton component is a button that will be used in the SendForm component.
+     */
     return (
         <motion.button
             type="submit"
             className="button button--send--hover button--send"
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
+            initial={{opacity: 0, y: "100%"}}
+            animate={{opacity: 1, y: 0}}
             transition={{duration: .7, delay: .4}}
         >
             <svg
