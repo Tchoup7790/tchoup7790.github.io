@@ -93,7 +93,7 @@ function ProjectsContent() {
                     </motion.p>
                     <motion.button
                         className="button"
-                        onClick={() => window.open(/*TODO: Put url*/)}
+                        onClick={() => window.open("https://github.com/Tchoup7790/SAE-puissanceQuatre")}
                         initial={{opacity: 0, y: "50%"}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{type: "spring", bounce: 0.4, duration: 1.2}}
@@ -148,7 +148,7 @@ function ProjectsContent() {
                     </motion.p>
                     <motion.button
                         className="button"
-                        onClick={() => window.open(/*TODO: put the good URL*/)}
+                        onClick={() => window.open("https://github.com/Tchoup7790/SAE-3Moustiquaire")}
                         initial={{opacity: 0, y: "50%"}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{type: "spring", bounce: 0.4, duration: 1.2}}
