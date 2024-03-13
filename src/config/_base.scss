@@ -1,4 +1,4 @@
-body{
+body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -6,5 +6,4 @@ body{
   align-content: center;
   overflow-x: hidden;
   background-color: var(--bg-color);
-  transition: .3s;
 }

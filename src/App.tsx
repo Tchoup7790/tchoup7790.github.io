@@ -5,6 +5,7 @@ import {motion} from "framer-motion";
 import Contact from "./view/contact.tsx";
 import Projects from "./view/projects.tsx";
 import About from './view/about.tsx';
+import LoadingScreen from "./view/loadingScreen.tsx";
 
 function App() {
     /**
@@ -70,6 +71,7 @@ function App() {
 
   return (
     <>
+        <LoadingScreen/>
         <header className='head'>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +106,7 @@ function App() {
                             onClick={() => setSelectedTab(item)}
                             className={selectedTab === item ? 'navbar__list__item navbar__list__item--active' : 'navbar__list__item'}
                         >
-                            <a href="#">{item}</a>
+                            <a>{item}</a>
                         </li>
                     ))}
                 </motion.ul>
