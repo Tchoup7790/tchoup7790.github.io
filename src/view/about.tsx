@@ -13,7 +13,7 @@ function About() {
             <div className="about__content">
                 <motion.img
                     className="about__content__img"
-                    src="/public/img/me.png" alt="Me"
+                    src="/img/me.png" alt="Me"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1.7, delay: .4}}
@@ -54,7 +54,7 @@ function About() {
                         initial={{opacity: 0, y: "100%"}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: .7, delay: 1.4}}
-                        onClick={() => window.open("/public/docs/CV.pdf", "_blank")}
+                        onClick={() => window.open("/docs/CV.pdf", "_blank")}
                     >Here my Resume</motion.button>
                 </div>
             </div>

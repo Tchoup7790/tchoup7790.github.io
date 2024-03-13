@@ -9,7 +9,7 @@ function ProjectsContent() {
                     initial={{opacity: 0, y: "50%"}}
                     whileInView={{opacity: 1, y: 0}}
                     transition={{type: "spring", bounce: 0.2, duration: 1.2}}
-                    className="projects__content__card__img" src="/public/img/portfolio.png" alt="portfolio index"/>
+                    className="projects__content__card__img" src="/img/portfolio.png" alt="portfolio index"/>
                 <div className="projects__content__card__text">
                     <motion.h3
                         className="projects__content__card__text__title"
@@ -55,7 +55,7 @@ function ProjectsContent() {
                     initial={{opacity: 0, y: "50%"}}
                     whileInView={{opacity: 1, y: 0}}
                     transition={{type: "spring", bounce: 0.2, duration: 1.2}}
-                    className="projects__content__card__img" src="/public/img/puissance4.png" alt="waiting screen"/>
+                    className="projects__content__card__img" src="/img/puissance4.png" alt="waiting screen"/>
                 <div className="projects__content__card__text">
                     <motion.h3
                         className="projects__content__card__text__title"
@@ -107,7 +107,7 @@ function ProjectsContent() {
                     initial={{opacity: 0, y: "50%"}}
                     whileInView={{opacity: 1, y: 0}}
                     transition={{type: "spring", bounce: 0.2, duration: 1.2}}
-                    className="projects__content__card__img" src="/public/img/3moustiquaire.png"
+                    className="projects__content__card__img" src="/img/3moustiquaire.png"
                     alt="index of 3 moustiquaire"/>
                 <div className="projects__content__card__text">
                     <motion.h3
@@ -162,7 +162,7 @@ function ProjectsContent() {
                     initial={{opacity: 0, y: "50%"}}
                     whileInView={{opacity: 1, y: 0}}
                     transition={{type: "spring", bounce: 0.2, duration: 1.2}}
-                    className="projects__content__card__img" src="/public/img/pikomino.png"
+                    className="projects__content__card__img" src="/img/pikomino.png"
                     alt="pikomino home page"/>
                 <div className="projects__content__card__text">
                     <motion.h3
@@ -215,7 +215,7 @@ function ProjectsContent() {
                     initial={{opacity: 0, y: "50%"}}
                     whileInView={{opacity: 1, y: 0}}
                     transition={{type: "spring", bounce: 0.2, duration: 1.2}}
-                    className="projects__content__card__img" src="/public/img/test.jpeg" alt="test"/>
+                    className="projects__content__card__img" src="/img/particles.png" alt="particles with some options"/>
                 <div className="projects__content__card__text">
                     <motion.h3
                         className="projects__content__card__text__title"
@@ -230,7 +230,8 @@ function ProjectsContent() {
                         whileInView={{opacity: 1, y: 0}}
                         transition={{type: "spring", bounce: 0.4, duration: 1.2}}
                     >This was my first computer science project. It was a particle generator created
-                        using <span className="projects__content__card__text__p__span">Golang</span> and <span className="projects__content__card__text__p__span">Ebiten</span>.
+                        using <span className="projects__content__card__text__p__span">Golang</span> and <span
+                            className="projects__content__card__text__p__span">Ebiten</span>.
                     </motion.p>
                     <motion.p className="project__content__card__text__p"
                               initial={{opacity: 0, y: "50%"}}
@@ -253,6 +254,13 @@ function ProjectsContent() {
                         transition={{type: "spring", bounce: 0.4, duration: 1.2}}
                     >Unfortunately, there's a problem with ebiten that means the project no longer works.
                     </motion.p>
+                    <motion.p
+                        className="project__content__card__text__p"
+                        initial={{opacity: 0, y: "50%"}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{type: "spring", bounce: 0.4, duration: 1.2}}
+                    >Thanks to <a href="https://github.com/Mitotow" className="linkInText" target="_blank">Mitoto</a> for the photo
+                    </motion.p>
                     <motion.button
                         className="button"
                         onClick={() => window.open("https://github.com/Tchoup7790/SAE-Particules")}
@@ -266,4 +274,5 @@ function ProjectsContent() {
         </div>
     )
 }
+
 export default ProjectsContent
