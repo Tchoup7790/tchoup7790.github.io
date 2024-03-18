@@ -1,0 +1,30 @@
+.footer{
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2rem 20rem;
+  &__link{
+    text-decoration: none;
+    &__svg{
+      height: 3rem;
+      width: 3rem;
+      transition: .2s ease-in;
+      &--primary {
+        fill: var(--primary-color-05);
+        stroke: var(--primary-color-05);
+        transition: .7s;
+      }
+      &--bg{
+        fill: var(--bg-color);
+        stroke: var(--primary-color-05);
+        transition: fill .7s;
+      }
+      &:hover{
+        opacity: .8;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
