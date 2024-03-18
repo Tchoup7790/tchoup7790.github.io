@@ -1,11 +1,10 @@
-import './main.scss'
+import './style.scss'
 import React, {useEffect, useState} from "react";
 import Home from "./view/home.tsx";
 import {motion} from "framer-motion";
 import Contact from "./view/contact.tsx";
 import Projects from "./view/projects.tsx";
 import About from './view/about.tsx';
-import LoadingScreen from "./view/loadingScreen.tsx";
 
 function App() {
     /**
@@ -71,7 +70,6 @@ function App() {
 
   return (
     <>
-        <LoadingScreen/>
         <header className='head'>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
