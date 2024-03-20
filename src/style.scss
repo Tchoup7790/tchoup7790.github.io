@@ -18,12 +18,12 @@
 @import "components/button/button";
 @import "components/loader/loader";
 
-@import "components/header/head";
-@import "components/navbar/navbar";
-@import "components/footer/footer";
-@import "components/form/form";
+@import "layout/header/head";
+@import "layout/header/navbar/navbar";
+@import "layout/footer/footer";
+@import "pages/contact/form/form";
 
-@import "assets/style/page";
+@import "pages/page";
 @import "pages/home/home";
 @import "pages/about/about";
 @import "pages/projects/projects";

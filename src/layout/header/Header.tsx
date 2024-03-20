@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import {baptisteSvgData} from "./baptisteSvg.ts";
+import {baptisteSvgData} from "../../assets/svg/baptisteSvg.ts";
 import Navbar from "./navbar/Navbar.tsx";
 import HeaderProps from "../../utils/HeaderProps.ts";
 

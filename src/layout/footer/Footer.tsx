@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { footerSvgData } from "./footerSvg";
+import { footerSvgData } from "../../assets/svg/footerSvg";
 
 function Footer(){
 

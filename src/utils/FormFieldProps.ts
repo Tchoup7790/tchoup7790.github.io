@@ -1,9 +1,9 @@
 /**
- * FormFieldProps is a type that defines the props of the ForField components
+ * FormFieldProps is a type that defines the props of the FormField components
  */
 type FormFieldProps = {
-    selectedTab: string,
-    setSelectedTab: React.Dispatch<string>
+    type: string,
+    name: string
 }
 
 export default FormFieldProps
