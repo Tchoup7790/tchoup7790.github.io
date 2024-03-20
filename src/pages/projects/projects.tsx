@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import ProjectsContent from "../layout/projectsContent.tsx";
+/* import ProjectsCard from "../components/projectsCard/projectsContent.tsx"; */
 function Projects() {
     return (
         <main className="page projects">
@@ -9,7 +9,7 @@ function Projects() {
                 whileInView={{opacity: 1, y: 0}}
                 transition= {{type: "spring", bounce: 0.4, duration: 1.5}}
             >Projects</motion.h1>
-            <ProjectsContent/>
+            {/* <ProjectsCard/> */}
         </main>
     )
 }

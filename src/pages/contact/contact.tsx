@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
-import SendForm from "../layout/sendForm.tsx";
+import FormContainer from "./form/FormContainer.tsx";
 
 function Contact() {
+    /**
+     * Contact Page
+     */
     return (
         <main className="page contact">
             <motion.h1
@@ -10,7 +13,7 @@ function Contact() {
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: .7}}
             >Contact Me</motion.h1>
-            <SendForm/>
+            <FormContainer/>
         </main>
     );
 }

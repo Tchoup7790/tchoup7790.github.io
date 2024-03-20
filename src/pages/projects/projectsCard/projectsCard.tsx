@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 
-function ProjectsContent() {
+function ProjectsCard() {
     return (
         <div className="projects__content">
             {/*Portfolio*/}
@@ -275,4 +275,4 @@ function ProjectsContent() {
     )
 }
 
-export default ProjectsContent
+export default ProjectsCard

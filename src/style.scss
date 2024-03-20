@@ -8,23 +8,23 @@
   font-family: 'Geomanist';
 }
 
-@import "utils/colors";
-@import "utils/keyframes";
+@import "assets/style/colors";
+@import "assets/style/keyframes";
 
-@import "config/reset";
-@import "config/typo";
-@import "config/base";
+@import "assets/style/reset";
+@import "assets/style/typo";
+@import "assets/style/base";
 
-@import "components/button";
-@import "components/loader";
+@import "components/button/button";
+@import "components/loader/loader";
 
-@import "layout/head";
-@import "layout/navbar";
-@import "layout/footer";
-@import "layout/form";
+@import "components/header/head";
+@import "components/navbar/navbar";
+@import "components/footer/footer";
+@import "components/form/form";
 
-@import "view/page";
-@import "view/home";
-@import "view/about";
-@import "view/projects";
-@import "view/contact";
+@import "assets/style/page";
+@import "pages/home/home";
+@import "pages/about/about";
+@import "pages/projects/projects";
+@import "pages/contact/contact";

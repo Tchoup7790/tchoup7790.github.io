@@ -1,38 +1,41 @@
 import {motion} from "framer-motion";
-import emailjs from '@emailjs/browser';
 import React, {useRef, useState} from "react";
-import SendButton from "../components/sendButton.tsx";
-import SpinningLoader from "../components/spinningLoader.tsx";
+import SendButton from "../../../components/button/SendButton.tsx";
+import SpinningLoader from "../../../components/loader/spinningLoader.tsx";
+import emailjs from '@emailjs/browser';
 
-function SendForm() {
+function FormContainer() {
     /**
      * Form reference
      */
-    const form : React.MutableRefObject<any> = useRef()
+    const form : React.MutableRefObject<HTMLFormElement | null> = useRef(null)
 
     /**
      * Sending state
      */
     const [isSending, setIsSending] = useState<string>("void");
 
+
     /**
-     * Send the message with emailjs
-     * @param e : React.FormEvent<HTMLFormElement>
+     * Handle form submission and sending
+     * @param e React.FormEvent<HTMLFormElement>
      */
-    const sendForm = async (e : React.FormEvent<HTMLFormElement>) => {
+    const handleFormSubmission = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
+        if (!form.current) return
+        
         document.querySelector('.button--send')!.setAttribute('class', 'button--send--active button--active button')
-
+    
         await new Promise(r => setTimeout(r, 2000))
-
+    
         /**
          * Set the sending state for loading animation
          */
         setIsSending("waiting")
-
+    
         await new Promise(r => setTimeout(r, 2000))
-
+    
         await emailjs
             .sendForm('service_gy1mene', 'template_tbwtiu8', form.current, {publicKey: 'LonPLjMkedDLllUsD'})
             .then(
@@ -42,46 +45,16 @@ function SendForm() {
                     console.log('FAILED...', error)
                 },
             );
-
+    
         form.current.reset()
     };
+    
 
-
+    /**
+     * Form component for contact page
+     */
     return (
-        <form className="form" ref={form} onSubmit={sendForm}>
-
-            <section className="form__section">
-                <motion.label
-                    className="form__section__label"
-                    initial={{opacity: 0, y: "100%"}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: .7, delay: .1}}
-                >Name
-                </motion.label>
-                <input className="form__section__input" type="text" name="name" required/>
-            </section>
-
-            <section className="form__section">
-                <motion.label
-                    className="form__section__label"
-                    initial={{opacity: 0, y: "100%"}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: .7, delay: .2}}
-                >Email
-                </motion.label>
-                <input className="form__section__input" type="email" name="email" required/>
-            </section>
-
-            <section className="form__section">
-                <motion.label
-                    className="form__section__label"
-                    initial={{opacity: 0, y: "100%"}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: .7, delay: .3}}
-                >Message
-                </motion.label>
-                <textarea name="message" className="form__section__textarea" required/>
-            </section>
+        <form className="form" ref={form} onSubmit={handleFormSubmission}>
 
             {/**
              * Send button handling and animation
@@ -122,7 +95,6 @@ function SendForm() {
             }
 
             {isSending == "notSent" &&
-
                 <p className="form__validation" style={{flexDirection:"column"}}>
                     <motion.span
                         initial={{opacity: 0, y: "100%"}}
@@ -146,4 +118,4 @@ function SendForm() {
     );
 }
 
-export default SendForm
+export default FormContainer
