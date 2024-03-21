@@ -1,5 +1,5 @@
 /**
- * HeaderProps is a type that defines the props of the Header and Navbar components
+ * @type HeaderProps - is a type that defines the props of the Header and Navbar components
  */
 type HeaderProps = {
     selectedTab: string,

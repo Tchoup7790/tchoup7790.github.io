@@ -1,10 +1,19 @@
 import { motion } from "framer-motion";
+
+/**
+ * Import the send Button SVG
+ */
 import { sendButtonSvgData } from "./sendButtonSvg";
 
-function SendButton() {
 
+/**
+ * SendButton
+ * 
+ * @returns { TSX.Element } - SendButton
+ */
+function SendButton() {
     /**
-     * Send Button SVG animation
+     * @const buttonVariants - Send Button SVG animation
      */
     const buttonVariants = {
         "hidden": {
@@ -17,10 +26,6 @@ function SendButton() {
             transition: {duration: 1.2, delay: 1}
         },
     }
-
-    /**
-     * Send Button Component for the contact form
-     */
     return (
         <motion.button
             type="submit"

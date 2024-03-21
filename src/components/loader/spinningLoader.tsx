@@ -1,9 +1,11 @@
 import {motion} from "framer-motion";
 
+/**
+ * SpinningLoader
+ * 
+ * @returns { TSX.Element }
+ */
 function SpinningLoader() {
-    /**
-     * Spinning loader during the sending of the form
-     */
     return (
         <motion.div
             className="loader"

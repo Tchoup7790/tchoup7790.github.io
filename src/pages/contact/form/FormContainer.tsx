@@ -1,25 +1,38 @@
 import React, {useRef, useState} from "react";
-import SendButton from "../../../components/button/SendButton.tsx";
-import SpinningLoader from "../../../components/loader/spinningLoader.tsx";
+/**
+ * Import emailjs - email handler
+*/
 import emailjs from '@emailjs/browser';
+
+/**
+ * Import the components
+*/
+import SendButton from "../../../components/button/SendButton.tsx";
+import SpinningLoader from "../../../components/loader/SpinningLoader.tsx";
 import FormField from "./FormField.tsx";
 import FormResult from "./FormResult.tsx";
 
+
+/**
+ * FormContainer
+ * 
+ * @returns { TSX.Element }
+ */
 function FormContainer() {
     /**
-     * Form reference
+     * @const form - Form reference
      */
     const form : React.MutableRefObject<HTMLFormElement | null> = useRef(null)
 
     /**
-     * Sending state
+     * @const {isSending, setIsSending} - Sending useState
      */
     const [isSending, setIsSending] = useState<string>("void");
 
 
     /**
      * Handle form submission and sending
-     * @param e React.FormEvent<HTMLFormElement>
+     * @param {React.FormEvent<HTMLFormElement>} e
      */
     const handleFormSubmission = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -49,19 +62,14 @@ function FormContainer() {
     
         form.current.reset()
     };
-    
-
-    /**
-     * Form component for contact page
-     */
     return (
         <form className="form" ref={form} onSubmit={handleFormSubmission}>
 
-            <FormField type="text" name="name"/>
+            <FormField type="text" name="name" delay={.4}/>
             
-            <FormField type="email" name="email"/>
+            <FormField type="email" name="email" delay={.6}/>
             
-            <FormField type="textarea" name="message"/>
+            <FormField type="textarea" name="message" delay={.8}/>
             
             {isSending == "void" && <SendButton/>}
             

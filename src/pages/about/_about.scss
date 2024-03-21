@@ -4,7 +4,7 @@
   &__title{
     position: relative;
     display: flex;
-    padding: 3rem 0;
+    padding-top: 3rem;
   }
   &__content{
     display: flex;
@@ -25,7 +25,7 @@
       align-items: start;
       justify-content: center;
       &__title{
-        padding: 2rem 0;
+        padding: 1.5rem 0;
       }
       &__p{
         padding: 1rem 0;

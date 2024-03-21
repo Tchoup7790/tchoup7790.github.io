@@ -1,15 +1,25 @@
 import {motion} from "framer-motion";
+
+/**
+ * Import the HeaderProps
+ */
 import HeaderProps from "../../../utils/HeaderProps";
 
+
+/**
+ * Navbar
+ * 
+ * @param {HeaderProps} *
+ * @param { string } selectedTab
+ * @param { React.Dispatch<string> } setSelectedTab
+ * 
+ * @returns { TSX.Element }
+ */
 function Navbar({setSelectedTab, selectedTab}: HeaderProps) {
     /**
-     * List of menu items
+     * @const menuItems - List of menu items
      */
     const menuItems = ['home', 'about', 'projects', 'contact']
-
-    /**
-     * Navbar Component for all pages
-     */
     return (
         <nav className='navbar'>
             <motion.ul

@@ -1,10 +1,21 @@
 import { motion } from "framer-motion";
+
+/**
+ * Import the footer SVG 
+ */
 import { footerSvgData } from "../../assets/svg/footerSvg";
 
-function Footer(){
+// TODO check animation 
+// TODO add color changement
 
+/**
+ * Footer
+ * 
+ * @returns { TSX.Element }
+ */
+function Footer(){
     /**
-     * Footer SVG animation
+     * @const footerVariants  - Footer SVG animation
      */
     const footerVariants = {
         "hidden": {
@@ -20,26 +31,20 @@ function Footer(){
             }
         },
     }
-
-    /**
-     * Footer Component for all pages
-     */
-    /* TODO check animation */
-    /* TODO add color changement */
     return (
         <footer className='footer'>
             <a href="https://github.com/Tchoup7790" className="footer__link" target="_blank">
                 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className='footer__link__svg'>
                     <motion.path 
                         className='footer__link__svg--primary' clipRule="evenodd" fillRule="evenodd" 
-                        d={footerSvgData.git_inner}
+                        d={footerSvgData.git_border}
                         variants={footerVariants}
                         initial={"hidden"}
                         whileInView={"visible"}
                     />
                     <motion.path
                         className='footer__link__svg--bg' fillRule="evenodd" clipRule="evenodd"
-                        d={footerSvgData.git_border}
+                        d={footerSvgData.git_inner}
                         variants={footerVariants}
                         initial={"hidden"}
                         whileInView={"visible"}/>

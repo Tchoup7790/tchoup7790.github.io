@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
+
+/**
+ * Import FormResultProps
+ */
 import FormResultProps from "../../../utils/FormResultProps";
+
+/**
+ * Import the svg for the validation
+ */
 import { formResultSvg } from "../../../assets/svg/formResultSvg";
 
+/**
+ * FormResult
+ * 
+ * @param {FormResultProps} *
+ * @param {boolean} state  
+ * 
+ * @returns {TSX.Element}
+ */
 function FormResult({state}:FormResultProps) {
-    /**
-     * FormResult component is a component that shows the result of the form submission
-     */
     return (
         state ? (
             <p className="form__validation">

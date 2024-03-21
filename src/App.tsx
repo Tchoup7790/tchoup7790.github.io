@@ -1,9 +1,9 @@
 import './style.scss'
 import React, {useEffect, useState} from "react";
-import Home from "./pages/home/home.tsx";
-import Contact from "./pages/contact/contact.tsx";
-import Projects from "./pages/projects/projects.tsx";
-import About from './pages/about/about.tsx';
+import Home from "./pages/home/Home.tsx";
+import Contact from "./pages/contact/Contact.tsx";
+import Projects from "./pages/projects/Projects.tsx";
+import About from './pages/about/About.tsx';
 import Header from "./layout/header/Header.tsx";
 import Footer from "./layout/footer/Footer.tsx";
 
@@ -48,10 +48,10 @@ function App() {
         {/**
          * Main content
          */}
-        {selectedTab === 'home' && <Home></Home>}
-        {selectedTab === 'about' && <About></About>}
-        {selectedTab === 'projects' && <Projects></Projects>}
-        {selectedTab === 'contact' && <Contact></Contact>}
+        {selectedTab === 'home' && <Home/>}
+        {selectedTab === 'about' && <About/>}
+        {selectedTab === 'projects' && <Projects/>}
+        {selectedTab === 'contact' && <Contact/>}
 
         <Footer/>
     </>

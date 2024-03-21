@@ -1,61 +1,46 @@
 import {motion} from "framer-motion";
 
+/**
+ * import the Image
+*/
+import me from "../../assets/img/me.png";
+
+/**
+ * import the components
+*/
+import Button from "../../components/button/Button";
+import AboutTextContent from "./AboutTextContent";
+
+/**
+ * About
+ * 
+ * @returns { TSX.Element }
+ */
 function About() {
+    /**
+     * @const onButtonClick - Function for Button components
+     */
+    const onButtonClick = () => {() => window.open("/docs/CV.pdf", "_blank")}
     return (
         <main className="about page">
             <motion.h1
                 className="about__title"
                 initial={{opacity: 0, y: "50%"}}
                 animate={{opacity: 1, y: 0}}
-                transition={{duration: .7}}
+                transition= {{type: "spring", bounce: .3, duration: 1.5}}
             >About
             </motion.h1>
             <div className="about__content">
                 <motion.img
                     className="about__content__img"
-                    src="/img/me.png" alt="Me"
+                    src={me} alt="Me"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1.7, delay: .4}}
                 />
                 <div className="about__content__text">
-                    <section>
-                        <motion.h3
-                            className="about__content__text__title"
-                            initial={{opacity: 0, y: "100%"}}
-                            animate={{opacity: 1, y: 0}}
-                            transition={{duration: .7, delay: .4}}
-                        >Who am I ?</motion.h3>
-                        <motion.p
-                            className="about__content__text__p"
-                            initial={{opacity: 0, y: "100%"}}
-                            animate={{opacity: 1, y: 0}}
-                            transition={{duration: .7, delay: .5}}
-                        >I am currently a student in the Computer Science University Technology Diploma (BUT) at the IUT of Nantes.
-                        </motion.p>
-                        <motion.p
-                            className="about__content__text__p"
-                            initial={{opacity: 0, y: "100%"}}
-                            animate={{opacity: 1, y: 0}}
-                            transition={{duration: .7, delay: .7}}
-                        >I found myself in web development by chance, after failing a year at university and feeling a bit lost about my future.
-                        </motion.p>
-                        <motion.p
-                            className="about__content__text__p"
-                            initial={{opacity: 0, y: "100%"}}
-                            animate={{opacity: 1, y: 0}}
-                            transition={{duration: .7, delay: .9}}
-                        >Outside of coding, music has been a part of my life since I was 8 years old, and sports, especially Handball, allow me to channel my energy.
-                        </motion.p>
-                    </section>
-                    <motion.button
-                        type="submit"
-                        className="button"
-                        initial={{opacity: 0, y: "100%"}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: .7, delay: 1.4}}
-                        onClick={() => window.open("/docs/CV.pdf", "_blank")}
-                    >Here my Resume</motion.button>
+                    <AboutTextContent/>
+                    <Button text="Here my Resume" onButtonClick={onButtonClick}/>
                 </div>
             </div>
         </main>

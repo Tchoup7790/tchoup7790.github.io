@@ -1,11 +1,33 @@
 import {motion} from "framer-motion";
-import {baptisteSvgData} from "../../assets/svg/baptisteSvg.ts";
+
+/**
+ * Import the Navbar Component
+ */
 import Navbar from "./navbar/Navbar.tsx";
+
+/**
+ * Import the SVG data for the title
+ */
+import {baptisteSvgData} from "../../assets/svg/baptisteSvg.ts";
+
+/**
+ * Import the HeaderProps
+ */
 import HeaderProps from "../../utils/HeaderProps.ts";
 
+
+/**
+ * Header
+ * 
+ * @param {HeaderProps} *
+ * @param { string } selectedTab
+ * @param { React.Dispatch<string> } setSelectedTab
+ * 
+ * @returns { TSX.Element }
+ */
 function Header({selectedTab, setSelectedTab}: HeaderProps){
     /**
-     * Title Name SVG and Animation
+     * @const titleVariants Title Name SVG and Animation
      */
     const titleVariants = {
         "hidden": {
@@ -21,10 +43,6 @@ function Header({selectedTab, setSelectedTab}: HeaderProps){
             }
         },
     }
-
-    /**
-     * Header Component for all pages
-     */
     return (
         <header className='head'>
             <svg
