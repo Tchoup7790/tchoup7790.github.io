@@ -7,7 +7,7 @@ import { sendButtonSvgData } from "./sendButtonSvg";
 
 
 /**
- * Renders a sendButton component.
+ * Renders a sendButton component for contact page.
  *
  * @function SendButton
  * @component
@@ -23,7 +23,7 @@ function SendButton() {
             pathLength: 0
         },
         "visible": {
-            opacity: 0,
+            opacity: 1,
             pathLength: 1,
             transition: {duration: 1.2, delay: 1}
         },

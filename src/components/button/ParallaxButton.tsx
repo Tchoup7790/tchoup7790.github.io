@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import ButtonProps from "../../utils/ButtonProps";
 
 /**
- * Renders a button component with parallax effect.
+ * Renders a button component with parallax effect for projects page.
  *
  * @function ParallaxButton
  * @component

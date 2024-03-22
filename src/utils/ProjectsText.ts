@@ -1,5 +1,5 @@
 /**
- * @const ProjectsText - This file contains the text for the projects pages.
+ * @const {Object} ProjectsText - This file contains the text for the projects pages.
  */
 const ProjectsText = {
     portfolio : [
