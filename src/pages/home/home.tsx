@@ -1,6 +1,13 @@
 import {motion } from 'framer-motion';
-function Home() {
 
+
+/**
+ * Renders the home page component.
+ * 
+ * @function Home
+ * @returns {TSX.Element} The JSX element representing the home page.
+ */
+function Home() {
     return (
         <main>
             <section className="page home">

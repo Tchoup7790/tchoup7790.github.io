@@ -1,13 +1,15 @@
 import { motion } from "framer-motion"
 
 /**
- * AboutTextContent 
+ * Renders the text content for the About page.
  * 
- * @returns {JSX.Element} - Text content of the about page
+ * @function AboutTextContent
+ * @component 
+ * @returns {TSX.Element} - Text content of the about page
  */
 function AboutTextContent (){
     /**
-     * @const text - For the text content of the about page
+     * @const {string[]} text - For the text content of the about page
      */
     const text = ["Who am I ?", "I am currently a student in the Computer Science University Technology Diploma (BUT) at the IUT of Nantes.","I found myself in web development by chance, after failing a year at university and feeling a bit lost about my future.","Outside of coding, music has been a part of my life since I was 8 years old, and sports, especially Handball, allow me to channel my energy."] 
     return(

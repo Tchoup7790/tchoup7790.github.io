@@ -5,19 +5,19 @@ import {motion} from "framer-motion";
  */
 import HeaderProps from "../../../utils/HeaderProps";
 
-
 /**
- * Navbar
- * 
- * @param {HeaderProps} *
- * @param { string } selectedTab
- * @param { React.Dispatch<string> } setSelectedTab
- * 
- * @returns { TSX.Element }
+ * Renders the navigation bar component.
+ *
+ * @function Navbar
+ * @component
+ * @param {HeaderProps} props - The component props.
+ * @param {React.Dispatch<string>} props.setSelectedTab - The function to set the selected tab.
+ * @param {string} props.selectedTab - The currently selected tab.
+ * @returns {TSX.Element} The rendered navigation bar.
  */
 function Navbar({setSelectedTab, selectedTab}: HeaderProps) {
     /**
-     * @const menuItems - List of menu items
+     * @const {string[]} menuItems - List of menu items
      */
     const menuItems = ['home', 'about', 'projects', 'contact']
     return (

@@ -17,17 +17,18 @@ import HeaderProps from "../../utils/HeaderProps.ts";
 
 
 /**
- * Header
- * 
- * @param {HeaderProps} *
- * @param { string } selectedTab
- * @param { React.Dispatch<string> } setSelectedTab
- * 
- * @returns { TSX.Element }
+ * Renders the header component.
+ *
+ * @function Header
+ * @component
+ * @param {HeaderProps} props - The component props.
+ * @param {string} props.selectedTab - The currently selected tab.
+ * @param {React.Dispatch<string>} props.setSelectedTab - The function to set the selected tab.
+ * @returns {TSX.Element} The rendered header component.
  */
 function Header({selectedTab, setSelectedTab}: HeaderProps){
     /**
-     * @const titleVariants Title Name SVG and Animation
+     * @const {Object} titleVariants Title Name SVG and Animation
      */
     const titleVariants = {
         "hidden": {

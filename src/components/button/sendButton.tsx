@@ -7,13 +7,15 @@ import { sendButtonSvgData } from "./sendButtonSvg";
 
 
 /**
- * SendButton
- * 
- * @returns { TSX.Element } - SendButton
+ * Renders a sendButton component.
+ *
+ * @function SendButton
+ * @component
+ * @returns {TSX.Element} The rendered sendButton component.
  */
 function SendButton() {
     /**
-     * @const buttonVariants - Send Button SVG animation
+     * @const {Object} buttonVariants - Send Button SVG animation
      */
     const buttonVariants = {
         "hidden": {

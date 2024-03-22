@@ -6,9 +6,10 @@ import { motion } from 'framer-motion';
 import FormContainer from "./form/FormContainer.tsx";
 
 /**
- * Contact
+ * render the Contact page
  * 
- * @returns { TSX.Element }
+ * @function Contact
+ * @returns { TSX.Element } The Contact page component.
  */
 function Contact() {
     return (

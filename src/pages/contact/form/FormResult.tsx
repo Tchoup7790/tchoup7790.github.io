@@ -10,13 +10,15 @@ import FormResultProps from "../../../utils/FormResultProps";
  */
 import { formResultSvg } from "../../../assets/svg/formResultSvg";
 
+
 /**
- * FormResult
+ * Renders the result of the form submission.
  * 
- * @param {FormResultProps} *
- * @param {boolean} state  
- * 
- * @returns {TSX.Element}
+ * @function FormResult
+ * @component
+ * @param {FormResultProps} props - The component props.
+ * @param {boolean} props.state - The state of the form submission.
+ * @returns {TSX.Element} The rendered result component.
  */
 function FormResult({state}:FormResultProps) {
     return (

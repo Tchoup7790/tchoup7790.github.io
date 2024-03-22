@@ -1,9 +1,11 @@
 import {motion} from "framer-motion";
 
 /**
- * SpinningLoader
- * 
- * @returns { TSX.Element }
+ * Renders a spinning loader component.
+ *
+ * @function SpinningLoader
+ * @component
+ * @returns { TSX.Element } The spinning loader component.
  */
 function SpinningLoader() {
     return (

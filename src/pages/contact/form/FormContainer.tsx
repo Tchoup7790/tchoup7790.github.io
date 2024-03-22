@@ -14,20 +14,31 @@ import FormResult from "./FormResult.tsx";
 
 
 /**
- * FormContainer
+ * Renders a form container component.
  * 
- * @returns { TSX.Element }
+ * @function FormContainer
+ * @component
+ * @returns { TSX.Element } The form container component
  */
 function FormContainer() {
     /**
-     * @const form - Form reference
+     * @const {React.MutableRefObject<HTMLFormElement | null>} form - Form reference
      */
-    const form : React.MutableRefObject<HTMLFormElement | null> = useRef(null)
+    const form :React.MutableRefObject<HTMLFormElement | null> = useRef(null)
 
     /**
      * @const {isSending, setIsSending} - Sending useState
      */
-    const [isSending, setIsSending] = useState<string>("void");
+    const [
+        /**
+         * @type {string}
+         */
+        isSending, 
+        /**
+         * @type {React.Dispatch<string>}
+         */
+        setIsSending
+    ] = useState<string>("void");
 
 
     /**

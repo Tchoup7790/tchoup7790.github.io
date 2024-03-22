@@ -1,5 +1,12 @@
-import './style.scss'
 import React, {useEffect, useState} from "react";
+/**
+ * Import the style
+ */
+import './style.scss'
+
+/**
+ * Import the components
+ */
 import Home from "./pages/home/Home.tsx";
 import Contact from "./pages/contact/Contact.tsx";
 import Projects from "./pages/projects/Projects.tsx";
@@ -8,9 +15,16 @@ import Header from "./layout/header/Header.tsx";
 import Footer from "./layout/footer/Footer.tsx";
 
 /* TODO add langage API */
+/**
+ * The main component of the application.
+ *
+ * @function App
+ * @returns {TSX.Element} The rendered JSX elements.
+ */
 function App() {
     /**
-     * Dark mode detector
+     * @const {Function} useThemeDetector - Dark mode detector
+     * @return {boolean}
      */
     const useThemeDetector = () => {
         const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -27,6 +41,9 @@ function App() {
         return isDarkTheme;
     }
 
+    /**
+     * @const {boolean} isDarkTheme
+     */
     const isDarkTheme = useThemeDetector();
 
     if (isDarkTheme) {
@@ -36,9 +53,18 @@ function App() {
     }
 
     /**
-     * Selected tab state
+     * @const {selectedTab, setSelectedTab} - Selected tab state
      */
-    const [selectedTab, setSelectedTab] = React.useState<string>('home')
+    const [
+        /**
+         * @type {string}
+         */
+        selectedTab, 
+        /**
+         * @type {React.Dispatch<string>}
+         */
+        setSelectedTab
+    ] = React.useState<string>('home')
 
 
   return (

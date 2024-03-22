@@ -6,13 +6,14 @@ import { motion } from "framer-motion";
 import CardContentProps from "../../../utils/CardContentProps";
 
 /**
- * ProjectsCardContent
+ * Render the ProjectsCardContent for Projects page
  * 
- * @param {CardContentProps} * 
- * @param {boolean} title 
- * @param {string} text
- * 
- * @returns {TSX.Element}
+ * @function ProjectsCardContent
+ * @content
+ * @param {CardContentProps} props - The props containing the title and text for the card content.
+ * @param {boolean} props.title 
+ * @param {string} props.text
+ * @returns {TSX.Element} The rendered card content
  */
 function ProjectsCardContent({title, text}: CardContentProps) {
   return (

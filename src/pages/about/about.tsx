@@ -12,13 +12,14 @@ import Button from "../../components/button/Button";
 import AboutTextContent from "./AboutTextContent";
 
 /**
- * About
+ * Renders the About page component.
  * 
- * @returns { TSX.Element }
+ * @function About
+ * @returns {TSX.Element} The About page component.
  */
 function About() {
     /**
-     * @const onButtonClick - Function for Button components
+     * @const {Function} onButtonClick - Function for Button components
      */
     const onButtonClick = () => {() => window.open("/docs/CV.pdf", "_blank")}
     return (
@@ -44,7 +45,7 @@ function About() {
                 </div>
             </div>
         </main>
-)
+    )
 }
 
 export default About

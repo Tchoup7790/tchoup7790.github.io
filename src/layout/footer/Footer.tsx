@@ -9,13 +9,15 @@ import { footerSvgData } from "../../assets/svg/footerSvg";
 // TODO add color changement
 
 /**
- * Footer
+ * Renders the footer component.
  * 
- * @returns { TSX.Element }
+ * @function Footer
+ * @component
+ * @returns { TSX.Element } The JSX element representing the footer.
  */
 function Footer(){
     /**
-     * @const footerVariants  - Footer SVG animation
+     * @const {Object} footerVariants  - Footer SVG animation
      */
     const footerVariants = {
         "hidden": {

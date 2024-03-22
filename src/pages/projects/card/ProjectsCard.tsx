@@ -12,20 +12,21 @@ import ParallaxButton from "../../../components/button/ParallaxButton";
 import CardProps from "../../../utils/CardProps";
 
 /**
- * ProjectsCard
- * 
- * @param {CardProps} *
- * @param {string} img
- * @param {string} title 
- * @param {string} text
- * @param {string} link
- * @param {boolean} left
- * 
- * @returns {TSX.Element}
+ * Renders a card component for projects.
+ *
+ * @function ProjectsCard
+ * @component
+ * @param {CardProps} props - The component props.
+ * @param {string} props.img - The image source for the card.
+ * @param {string} props.title - The title of the project.
+ * @param {string[]} props.text - The text content of the project.
+ * @param {string} props.link - The link to the project.
+ * @param {boolean} props.left - Determines if the card should be aligned to the left.
+ * @returns {TSX.Element} The rendered card component.
  */
 function ProjectsCard({img, title, text, link, left}:CardProps) {
     /**
-     * @const onButtonClick - Open the link in a new tab function for ParallaxButton
+     * @const {Function} onButtonClick - Opens the link in a new tab when the button is clicked.
      */
     const onButtonClick = () => window.open(link)
 

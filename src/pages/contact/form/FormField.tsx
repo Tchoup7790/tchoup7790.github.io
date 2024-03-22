@@ -5,15 +5,17 @@ import { motion } from "framer-motion";
  */
 import FormFieldProps from "../../../utils/FormFieldProps";
 
+
 /**
- * FormField
- * 
- * @param {FormFieldProps} *
- * @param {string} name
- * @param {string} type
- * @param {number} delay
- * 
- * @returns {TSX.Element}
+ * Renders a form field component.
+ *
+ * @function FormField
+ * @component
+ * @param {FormFieldProps} props - The props for the form field component.
+ * @param {string} props.name - The name of the form field.
+ * @param {string} props.type - The type of the form field.
+ * @param {number} props.delay - The delay for the animation of the form field.
+ * @returns {TSX.Element} The rendered form field component.
  */
 function FormField({name, type, delay}:FormFieldProps) {
     return (

@@ -17,9 +17,10 @@ import particlesImg from '../../assets/img/particles.png';
 
 
 /**
- * Projects
+ * Renders the Projects page.
  * 
- * @returns { TSX.Element }
+ * @function Projects
+ * @returns { TSX.Element } The TSX element representing the Projects page.
  */
 function Projects() {
     return (
